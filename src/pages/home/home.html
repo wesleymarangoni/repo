@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>MySoccer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+    <ion-card *ngFor="let new of listNews" (click)="newSelected(new)">  
+        <img src="{{ new.imagePath }}"/> 
+        <ion-card-title>
+            {{ new.title }}
+        </ion-card-title> 
+        <p>
+            {{ new.description }}
+          </p>
+     </ion-card>
+     <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+  </ion-content>

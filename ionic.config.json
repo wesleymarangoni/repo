@@ -1,0 +1,7 @@
+{
+  "name": "MySoccer",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

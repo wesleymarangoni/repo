@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Noticias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngIf="id">  
+        <ion-card-title>
+            {{id.title }}
+        </ion-card-title> 
+        <img src="{{id.imagePath }}"/> 
+        <p>
+            {{id.description }}
+        </p>      
+      </ion-card>
+
+</ion-content>

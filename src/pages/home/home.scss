@@ -1,0 +1,8 @@
+page-home {
+    p {
+        max-width: 2000ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+}
